@@ -76,14 +76,16 @@ import Layout from '../layouts/Layout.astro';
 			</div>
 			<div class="menu-extras">
 				<div class="extras-heading">
-					<p class="section-label">FROM THE TEA ROOM <span>05 — 08</span></p>
+					<p class="section-label">FROM THE TEA ROOM <span>05 — 10</span></p>
 					<p>茶房の定番と、季節の小さな甘味。</p>
 				</div>
 				<div class="extras-list">
-					<article class="extra-item"><span class="extra-number">05</span><div><h3>朝露 <i>asatsuyu</i></h3><p>一番摘み玉露 / まろやかな旨み</p></div><strong>¥1,200</strong></article>
-					<article class="extra-item"><span class="extra-number">06</span><div><h3>焙じ茶プリン</h3><p>自家焙煎ほうじ茶 / 黒蜜</p></div><strong>¥780</strong></article>
-					<article class="extra-item"><span class="extra-number">07</span><div><h3>季節の練り切り</h3><p>白餡 / 手仕事の上生菓子</p></div><strong>¥850</strong></article>
-					<article class="extra-item"><span class="extra-number">08</span><div><h3>柚子ソーダ</h3><p>徳島県産柚子 / きび糖 / 炭酸</p></div><strong>¥720</strong></article>
+					<article class="extra-item"><span class="extra-number">05</span><img class="extra-photo" src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=75" alt="茶葉を丁寧に淹れた一杯" loading="lazy" /><div><h3>朝露 <i>asatsuyu</i></h3><p>一番摘み玉露 / まろやかな旨み</p></div><strong>¥1,200</strong></article>
+					<article class="extra-item"><span class="extra-number">06</span><img class="extra-photo" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=75" alt="果実を添えたなめらかなミルクプリン" loading="lazy" /><div><h3>果実のミルクプリン</h3><p>季節の果実 / ミルク / はちみつ</p></div><strong>¥780</strong></article>
+					<article class="extra-item"><span class="extra-number">07</span><img class="extra-photo" src="https://images.unsplash.com/photo-1706350091276-ba994c35cd99?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=75" alt="季節をかたどった和菓子" loading="lazy" /><div><h3>季節の練り切り</h3><p>白餡 / 手仕事の上生菓子</p></div><strong>¥850</strong></article>
+					<article class="extra-item"><span class="extra-number">08</span><img class="extra-photo" src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=75" alt="ライムを添えた冷たいお茶" loading="lazy" /><div><h3>柚子の水出し茶</h3><p>徳島県産柚子 / 水出し煎茶</p></div><strong>¥720</strong></article>
+					<article class="extra-item"><span class="extra-number">09</span><img class="extra-photo" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=75" alt="いちごを添えた季節のアイスクリーム" loading="lazy" /><div><h3>苺みるくアイス</h3><p>苺 / ミルク / きび糖</p></div><strong>¥760</strong></article>
+					<article class="extra-item"><span class="extra-number">10</span><img class="extra-photo" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=180&amp;h=180&amp;q=75" alt="カカオの香り豊かなチョコレートケーキ" loading="lazy" /><div><h3>黒糖ガトーショコラ</h3><p>カカオ / 沖縄黒糖 / 発酵バター</p></div><strong>¥820</strong></article>
 				</div>
 			</div>
 		</section>
@@ -160,7 +162,8 @@ import Layout from '../layouts/Layout.astro';
 	.extras-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
 	.extras-heading > p:last-child { color: #68756a; font-size: 11px; }
 	.extras-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 52px; }
-	.extra-item { display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 12px; min-height: 102px; border-bottom: 1px solid var(--line); }
+	.extra-item { display: grid; grid-template-columns: 26px 64px minmax(0, 1fr) auto; align-items: center; gap: 13px; min-height: 112px; border-bottom: 1px solid var(--line); }
+	.extra-photo { display: block; width: 64px; height: 64px; object-fit: cover; filter: saturate(.8); }
 	.extra-number { align-self: start; padding-top: 25px; color: var(--red); font: 10px Arial, sans-serif; letter-spacing: .1em; }
 	.extra-item h3 { gap: 10px; margin: 0 0 7px; font-size: 20px; }
 	.extra-item h3 i { font-size: 12px; }
@@ -247,7 +250,8 @@ import Layout from '../layouts/Layout.astro';
 		.extras-heading { display: block; margin-bottom: 11px; }
 		.extras-heading > p:last-child { margin-top: 12px; font-size: 10px; }
 		.extras-list { grid-template-columns: 1fr; }
-		.extra-item { grid-template-columns: 28px 1fr auto; gap: 10px; min-height: 88px; }
+		.extra-item { grid-template-columns: 22px 54px minmax(0, 1fr) auto; gap: 10px; min-height: 88px; }
+		.extra-photo { width: 54px; height: 54px; }
 		.extra-number, .extra-item > strong { padding-top: 22px; }
 		.extra-item h3 { gap: 7px; font-size: 18px; }
 		.extra-item h3 i { font-size: 11px; }
