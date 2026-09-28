@@ -74,6 +74,18 @@ import Layout from '../layouts/Layout.astro';
 					<div class="card-info"><div class="card-heading"><span>SEASONAL CAKE 02</span><strong>¥1,600</strong></div><h3>宵待ち <i>yoimachi</i></h3><p>カカオ / 黒糖 / 発酵バター</p></div>
 				</article>
 			</div>
+			<div class="menu-extras">
+				<div class="extras-heading">
+					<p class="section-label">FROM THE TEA ROOM <span>05 — 08</span></p>
+					<p>茶房の定番と、季節の小さな甘味。</p>
+				</div>
+				<div class="extras-list">
+					<article class="extra-item"><span class="extra-number">05</span><div><h3>朝露 <i>asatsuyu</i></h3><p>一番摘み玉露 / まろやかな旨み</p></div><strong>¥1,200</strong></article>
+					<article class="extra-item"><span class="extra-number">06</span><div><h3>焙じ茶プリン</h3><p>自家焙煎ほうじ茶 / 黒蜜</p></div><strong>¥780</strong></article>
+					<article class="extra-item"><span class="extra-number">07</span><div><h3>季節の練り切り</h3><p>白餡 / 手仕事の上生菓子</p></div><strong>¥850</strong></article>
+					<article class="extra-item"><span class="extra-number">08</span><div><h3>柚子ソーダ</h3><p>徳島県産柚子 / きび糖 / 炭酸</p></div><strong>¥720</strong></article>
+				</div>
+			</div>
 		</section>
 
 		<section class="visit" id="visit">
@@ -144,6 +156,16 @@ import Layout from '../layouts/Layout.astro';
 	.section-note { color: #68756a; font-size: 12px; line-height: 1.9; text-align: right; }
 	.menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; margin-top: 54px; }
 	.menu-card:nth-child(2) { margin-top: 74px; }
+	.menu-extras { margin-top: 108px; border-top: 1px solid var(--line); padding-top: 26px; }
+	.extras-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
+	.extras-heading > p:last-child { color: #68756a; font-size: 11px; }
+	.extras-list { display: grid; grid-template-columns: 1fr 1fr; column-gap: 52px; }
+	.extra-item { display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 12px; min-height: 102px; border-bottom: 1px solid var(--line); }
+	.extra-number { align-self: start; padding-top: 25px; color: var(--red); font: 10px Arial, sans-serif; letter-spacing: .1em; }
+	.extra-item h3 { gap: 10px; margin: 0 0 7px; font-size: 20px; }
+	.extra-item h3 i { font-size: 12px; }
+	.extra-item p { color: #68756a; font-size: 11px; line-height: 1.6; }
+	.extra-item > strong { align-self: start; padding-top: 25px; color: var(--ink); font: 12px Arial, sans-serif; font-weight: 400; white-space: nowrap; }
 	.card-image { height: 365px; background-position: center; background-size: cover; filter: saturate(.72); }
 	.featured-card .card-image { height: 430px; }
 	.tea-image { background-image: url('https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=1000&q=80'); }
@@ -221,6 +243,15 @@ import Layout from '../layouts/Layout.astro';
 		.section-note { margin-top: 17px; font-size: 11px; text-align: left; }
 		.menu-grid { display: block; margin-top: 34px; }
 		.menu-card:nth-child(2) { margin-top: 36px; }
+		.menu-extras { margin-top: 72px; padding-top: 21px; }
+		.extras-heading { display: block; margin-bottom: 11px; }
+		.extras-heading > p:last-child { margin-top: 12px; font-size: 10px; }
+		.extras-list { grid-template-columns: 1fr; }
+		.extra-item { grid-template-columns: 28px 1fr auto; gap: 10px; min-height: 88px; }
+		.extra-number, .extra-item > strong { padding-top: 22px; }
+		.extra-item h3 { gap: 7px; font-size: 18px; }
+		.extra-item h3 i { font-size: 11px; }
+		.extra-item p { font-size: 10px; }
 		.card-image, .featured-card .card-image { height: 300px; }
 		.card-info { padding-top: 16px; padding-bottom: 19px; }
 		h3 { gap: 9px; font-size: 23px; }
