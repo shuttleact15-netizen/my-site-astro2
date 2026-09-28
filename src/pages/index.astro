@@ -14,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
 				<a href="#menu">季節のメニュー</a>
 				<a href="#visit">店舗情報</a>
 			</div>
-			<a class="nav-action" href="mailto:hello@kasane.example">席を予約する <span>↗</span></a>
+			<p class="nav-location">KIYOSUMI-SHIRAKAWA<br />TOKYO</p>
 			<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
 				<span class="menu-toggle-label">MENU</span>
 				<span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
@@ -30,156 +30,239 @@ import Layout from '../layouts/Layout.astro';
 
 		<section class="hero shell" id="top">
 			<div class="hero-copy">
-				<p class="eyebrow">TEA &amp; SWEETS ATELIER / TOKYO</p>
-				<h1>季節を、<br /><em>重ねる。</em></h1>
-				<p class="hero-intro">ひと口の中に、今日の空気を。<br />KASANEは、茶と菓子で季節を味わう小さなアトリエです。</p>
-				<a class="text-link" href="#menu">今月の景色を見る <span>↓</span></a>
+				<p class="eyebrow"><span></span> TEA &amp; SWEETS ATELIER / TOKYO</p>
+				<h1>季節を、<br /><em>ひとくち。</em></h1>
+				<p class="hero-intro">茶葉の香り、菓子の余韻。<br />今日だけの季節を、清澄白河の小さな茶房で。</p>
+				<div class="hero-actions">
+					<a class="booking-button" href="#visit">席を予約する <span>↗</span></a>
+					<a class="text-link" href="#menu">季節のメニューを見る <span>↓</span></a>
+				</div>
+				<p class="hero-hours">OPEN 11:00 — 18:00 <span>火曜定休</span></p>
 			</div>
 			<div class="hero-image-wrap">
-				<div class="stamp">一<br />服<br />一<br />菓</div>
-				<img class="hero-image" src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="木のテーブルに置かれた日本茶と菓子" />
-				<div class="image-caption"><span>01 — 春の余白</span><span>茶房 / 11:00 — 18:00</span></div>
+				<div class="image-index">季節の茶房 <span>01 / 04</span></div>
+				<img class="hero-image" src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&amp;fit=crop&amp;w=1400&amp;h=1000&amp;q=85" alt="ライムを添えた冷たい琥珀色のお茶" />
+				<div class="image-caption"><span>季節の一杯を、ゆっくり。</span><span>EST. 2024</span></div>
 			</div>
 		</section>
 
-		<section class="statement shell" id="story">
-			<p class="section-label">OUR PHILOSOPHY / 02</p>
-			<div class="statement-content">
-				<h2>急がない時間が、<br /><span>いちばん贅沢。</span></h2>
-				<div class="statement-body">
-					<p>山の茶葉、季節の果実、手のひらでつくる菓子。素材の声を聞きながら、ひとつずつ丁寧に仕立てています。</p>
-					<a class="circle-link" href="#visit" aria-label="KASANEについて詳しく見る">詳しく<br />見る <span>↗</span></a>
+		<section class="statement" id="story">
+			<div class="statement-inner shell">
+				<p class="section-label">OUR PHILOSOPHY <span>02</span></p>
+				<div class="statement-content">
+					<h2>急がない時間を、<br /><em>味わう。</em></h2>
+					<div class="statement-body">
+						<p>山の茶葉、季節の果実、手のひらでつくる菓子。素材の声を聞きながら、ひとつずつ丁寧に仕立てています。</p>
+						<p class="statement-aside">湯を注ぐ音まで、<br />今日の一服に。</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
 		<section class="menu-section shell" id="menu">
 			<div class="section-heading">
-				<p class="section-label">SEASONAL MENU / 03</p>
-				<p class="section-note">その日、その時だけの<br />小さなメニュー。</p>
+				<p class="section-label">SEASONAL MENU <span>03</span></p>
+				<p class="section-note">旬の素材を、いちばんおいしいかたちで。<br />お茶と菓子の季節の組み合わせ。</p>
 			</div>
 			<div class="menu-grid">
 				<article class="menu-card featured-card">
-					<div class="card-image tea-image"></div>
-					<div class="card-info"><span>01</span><h3>薄霞 — usugasumi</h3><p>煎茶 / 白桃 / 桜葉</p><strong>¥1,800</strong></div>
+					<div class="card-image tea-image" role="img" aria-label="ラテアートを浮かべた抹茶ラテ"></div>
+					<div class="card-info"><div class="card-heading"><span>MATCHA LATTE 01</span><strong>¥1,800</strong></div><h3>若葉 <i>wakaba</i></h3><p>石臼挽き抹茶 / きび糖 / 和三盆</p></div>
 				</article>
 				<article class="menu-card">
-					<div class="card-image sweet-image"></div>
-					<div class="card-info"><span>02</span><h3>山笑う — yama warau</h3><p>抹茶 / 木の芽 / 黒糖</p><strong>¥1,600</strong></div>
+					<div class="card-image sweet-image" role="img" aria-label="チョコレートとクリームを重ねたケーキ"></div>
+					<div class="card-info"><div class="card-heading"><span>SEASONAL CAKE 02</span><strong>¥1,600</strong></div><h3>宵待ち <i>yoimachi</i></h3><p>カカオ / 黒糖 / 発酵バター</p></div>
 				</article>
 			</div>
 		</section>
 
-		<section class="visit shell" id="visit">
-			<div class="visit-mark">K</div>
-			<div>
-				<p class="section-label">COME VISIT / 04</p>
-				<h2>東京・清澄白河<br /><em>静かな路地の奥。</em></h2>
+		<section class="visit" id="visit">
+			<div class="visit-inner shell">
+				<div class="visit-heading">
+					<p class="section-label">COME VISIT <span>04</span></p>
+					<h2>路地の奥で、<br /><em>お待ちしています。</em></h2>
+				</div>
+				<div class="visit-details">
+					<div class="visit-detail"><span>ADDRESS</span><p>東京都江東区清澄 2-7-8</p></div>
+					<div class="visit-detail"><span>HOURS</span><p>11:00 — 18:00<br />火曜定休</p></div>
+					<a class="visit-booking" href="mailto:hello@kasane.example?subject=KASANE%20%E3%81%94%E4%BA%88%E7%B4%84%E3%81%AE%E7%9B%B8%E8%AB%87">ご予約・お問い合わせ <span>↗</span></a>
+				</div>
 			</div>
-			<div class="visit-details"><p>東京都江東区清澄 2-7-8<br />11:00 — 18:00 / 火曜定休</p><a class="text-link" href="mailto:hello@kasane.example">席を予約する <span>↗</span></a></div>
 		</section>
 
-		<footer class="footer shell"><span>© KASANE ATELIER</span><span>季節とともに、またここで。</span><a href="#top">↑ TOP</a></footer>
+		<footer class="footer shell"><a class="footer-brand" href="#top">KASANE<span>TEA &amp; SWEETS ATELIER</span></a><span>季節とともに、またここで。</span><a class="back-top" href="#top">BACK TO TOP ↑</a><small>© KASANE ATELIER 2026</small></footer>
 	</main>
 </Layout>
 
 <style>
-	:global(html) { scroll-behavior: smooth; scroll-padding-top: 93px; }
+	:global(html) { scroll-behavior: smooth; scroll-padding-top: 82px; }
 	:global(body) { overflow-x: hidden; }
-	main { --ink: #1e2822; --paper: #f3efe7; --red: #bd4938; --line: rgba(30, 40, 34, .2); background: var(--paper); }
-	.shell { width: min(1180px, calc(100% - 72px)); margin: 0 auto; }
-	.nav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; min-height: 92px; border-bottom: 1px solid var(--line); background: var(--paper); }
-	.brand { display: flex; align-items: center; gap: 11px; color: var(--ink); font: 700 12px/1 Georgia, serif; letter-spacing: .18em; text-decoration: none; }
-	.brand-mark { display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid var(--ink); border-radius: 50%; font: 15px/1 serif; letter-spacing: 0; }
-	.nav-links { display: flex; gap: 32px; margin-left: 80px; }
-	.nav-links a, .nav-action { color: var(--ink); font-size: 11px; text-decoration: none; letter-spacing: .08em; }
-	.nav-links a:hover, .text-link:hover, .nav-action:hover { color: var(--red); }
-	.nav-action { border-bottom: 1px solid var(--ink); padding-bottom: 7px; }
-	.nav-action span, .text-link span { margin-left: 8px; font-size: 16px; }
+	main { --ink: #20372f; --paper: #f5f2eb; --sage: #e6e8df; --red: #b74b3d; --line: rgba(32, 55, 47, .2); background: var(--paper); color: var(--ink); }
+	.shell { width: min(1200px, calc(100% - 96px)); margin: 0 auto; }
+	h1, h2, h3, p { margin: 0; }
+	.nav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; min-height: 82px; border-bottom: 1px solid var(--line); background: rgba(245, 242, 235, .97); }
+	.brand { display: inline-flex; align-items: center; gap: 12px; color: var(--ink); font: 700 14px/1 Georgia, serif; letter-spacing: .16em; text-decoration: none; }
+	.brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--ink); border-radius: 50%; font: 16px/1 serif; letter-spacing: 0; }
+	.nav-links { display: flex; gap: 38px; }
+	.nav-links a { position: relative; padding: 10px 0; color: var(--ink); font-size: 13px; text-decoration: none; }
+	.nav-links a::after { position: absolute; right: 0; bottom: 4px; left: 0; height: 1px; background: var(--red); content: ''; transform: scaleX(0); transform-origin: left; transition: transform .2s ease; }
+	.nav-links a:hover::after { transform: scaleX(1); }
+	.nav-location { color: #69756b; font: 9px/1.6 Arial, sans-serif; letter-spacing: .15em; text-align: right; }
 	.menu-toggle, .mobile-menu { display: none; }
 	.mobile-menu[hidden] { display: none; }
-	.hero { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(40px, 8vw, 120px); align-items: center; min-height: 640px; padding: 78px 0 105px; }
-	.eyebrow, .section-label { color: var(--red); font: 11px/1.4 Arial, sans-serif; letter-spacing: .16em; }
-	h1, h2, h3, p { margin: 0; }
-	h1 { margin: 29px 0 28px; color: var(--ink); font: 500 clamp(64px, 8vw, 110px)/.91 Georgia, serif; letter-spacing: -.055em; }
+	.hero { display: grid; grid-template-columns: .86fr 1.14fr; gap: 76px; align-items: center; min-height: 690px; padding: 76px 0 104px; }
+	.hero-copy { padding: 10px 0 0 12px; }
+	.eyebrow, .section-label { color: var(--red); font: 11px/1.5 Arial, sans-serif; letter-spacing: .16em; }
+	.eyebrow { display: flex; align-items: center; gap: 10px; }
+	.eyebrow span { width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+	h1 { margin: 34px 0 28px; color: var(--ink); font: 500 78px/.99 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif JP', serif; }
 	h1 em, h2 em { color: var(--red); font-style: normal; }
-	.hero-intro { color: #647066; font-size: 13px; line-height: 2; }
-	.text-link { display: inline-block; margin-top: 38px; border-bottom: 1px solid var(--ink); padding-bottom: 8px; color: var(--ink); font-size: 11px; letter-spacing: .1em; text-decoration: none; }
+	.hero-intro { color: #58685d; font-size: 15px; line-height: 2; }
+	.hero-actions { display: flex; align-items: center; gap: 24px; margin-top: 34px; }
+	.booking-button, .visit-booking { display: inline-flex; align-items: center; justify-content: space-between; gap: 26px; min-height: 52px; padding: 0 20px; background: var(--red); color: #fffaf2; font-size: 13px; letter-spacing: .04em; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+	.booking-button:hover, .visit-booking:hover { background: #96392f; transform: translateY(-2px); }
+	.booking-button span, .visit-booking span { font-size: 17px; }
+	.text-link { display: inline-flex; align-items: center; gap: 9px; border-bottom: 1px solid var(--ink); padding: 8px 0; color: var(--ink); font-size: 12px; text-decoration: none; }
+	.text-link:hover { color: var(--red); border-color: var(--red); }
+	.hero-hours { margin-top: 38px; color: #68756a; font: 10px/1.5 Arial, sans-serif; letter-spacing: .1em; }
+	.hero-hours span { margin-left: 12px; padding-left: 12px; border-left: 1px solid var(--line); }
 	.hero-image-wrap { position: relative; }
-	.hero-image { display: block; width: 100%; height: 480px; object-fit: cover; object-position: center; filter: saturate(.72); }
-	.stamp { position: absolute; z-index: 1; top: -33px; left: -30px; display: grid; place-items: center; width: 67px; height: 67px; border: 1px solid var(--red); border-radius: 50%; color: var(--red); font: 15px/1.08 serif; text-align: center; }
-	.image-caption { display: flex; justify-content: space-between; margin-top: 15px; color: #6f776d; font: 10px/1.2 Arial, sans-serif; letter-spacing: .08em; }
-	.statement { border-top: 1px solid var(--line); padding: 90px 0 120px; }
-	.statement-content { display: grid; grid-template-columns: 1fr 1fr; gap: 12%; margin-top: 35px; }
-	h2 { font: 500 clamp(38px, 5vw, 68px)/1.05 Georgia, serif; letter-spacing: -.045em; }
-	.statement-body { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; padding-top: 35px; }
-	.statement-body p { max-width: 290px; color: #647066; font-size: 13px; line-height: 2.1; }
-	.circle-link { display: grid; flex: 0 0 auto; place-items: center; width: 100px; height: 100px; border: 1px solid var(--red); border-radius: 50%; color: var(--red); font-size: 11px; line-height: 1.5; text-align: center; text-decoration: none; }
-	.circle-link span { font-size: 15px; }
-	.menu-section { border-top: 1px solid var(--line); padding: 90px 0 130px; }
-	.section-heading { display: flex; justify-content: space-between; align-items: flex-start; }
-	.section-note { color: #647066; font-size: 13px; line-height: 1.8; text-align: right; }
-	.menu-grid { display: grid; grid-template-columns: 1.16fr .84fr; gap: 34px; align-items: end; margin-top: 55px; }
-	.menu-card { background: #e8e2d7; }
-	.featured-card { margin-bottom: 60px; }
-	.card-image { height: 340px; background-position: center; background-size: cover; filter: saturate(.65); }
+	.image-index { display: flex; justify-content: space-between; margin-bottom: 12px; color: var(--red); font-size: 11px; letter-spacing: .08em; }
+	.image-index span { font: 10px Arial, sans-serif; letter-spacing: .12em; }
+	.hero-image { display: block; width: 100%; height: 490px; object-fit: cover; object-position: center; filter: saturate(.76); }
+	.image-caption { display: flex; justify-content: space-between; gap: 16px; margin-top: 13px; color: #68756a; font-size: 10px; letter-spacing: .06em; }
+	.statement { background: var(--sage); padding: 98px 0 112px; }
+	.section-label { display: flex; align-items: center; gap: 14px; }
+	.section-label span { color: #8a9389; font: 10px Arial, sans-serif; }
+	.statement-content { display: grid; grid-template-columns: 1fr 1fr; gap: 12%; margin-top: 40px; }
+	h2 { font: 500 58px/1.18 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif JP', serif; }
+	.statement-body { display: grid; grid-template-columns: 1fr .7fr; align-items: end; gap: 42px; padding-top: 12px; }
+	.statement-body p { max-width: 330px; color: #58685d; font-size: 14px; line-height: 2.1; }
+	.statement-body .statement-aside { color: var(--red); font: 19px/1.8 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif JP', serif; }
+	.menu-section { padding: 108px 0 128px; }
+	.section-heading { display: flex; justify-content: space-between; align-items: end; }
+	.section-note { color: #68756a; font-size: 12px; line-height: 1.9; text-align: right; }
+	.menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; margin-top: 54px; }
+	.menu-card:nth-child(2) { margin-top: 74px; }
+	.card-image { height: 365px; background-position: center; background-size: cover; filter: saturate(.72); }
 	.featured-card .card-image { height: 430px; }
 	.tea-image { background-image: url('https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=1000&q=80'); }
 	.sweet-image { background-image: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80'); }
-	.card-info { position: relative; padding: 19px 22px 23px; }
-	.card-info > span { color: var(--red); font: 10px Arial, sans-serif; letter-spacing: .12em; }
-	h3 { margin: 14px 0 8px; color: var(--ink); font: 500 25px Georgia, serif; }
-	.card-info p { color: #647066; font-size: 11px; }
-	.card-info strong { position: absolute; right: 22px; bottom: 23px; color: var(--ink); font: 12px Arial, sans-serif; font-weight: 400; }
-	.visit { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; gap: 30px; border-top: 1px solid var(--line); padding: 90px 0; }
-	.visit h2 { margin-top: 25px; font-size: clamp(34px, 4.5vw, 58px); }
-	.visit-mark { color: var(--red); font: 140px/.7 Georgia, serif; }
-	.visit-details { justify-self: end; color: #647066; font-size: 11px; line-height: 2; }
-	.visit-details .text-link { margin-top: 22px; }
-	.footer { display: flex; justify-content: space-between; border-top: 1px solid var(--line); padding: 24px 0 30px; color: #7a8178; font: 10px Arial, sans-serif; letter-spacing: .08em; }
-	.footer a { color: var(--ink); text-decoration: none; }
-	@media (max-width: 720px) {
-		:global(html) { scroll-padding-top: 76px; }
-		.shell { width: min(100% - 38px, 560px); }
-		.nav { min-height: 75px; }
-		.nav-links { display: none; }
-		.nav-action { display: none; }
-		.menu-toggle { display: flex; align-items: center; gap: 10px; border: 0; border-bottom: 1px solid var(--ink); background: transparent; padding: 9px 0 8px; color: var(--ink); cursor: pointer; font: 10px Arial, sans-serif; letter-spacing: .13em; }
-		.menu-icon { display: grid; gap: 5px; width: 22px; }
+	.card-info { padding: 20px 2px 0; border-bottom: 1px solid var(--line); padding-bottom: 22px; }
+	.card-heading { display: flex; align-items: center; justify-content: space-between; color: var(--red); font: 10px Arial, sans-serif; letter-spacing: .12em; }
+	.card-heading strong { color: var(--ink); font-size: 12px; font-weight: 400; letter-spacing: .04em; }
+	h3 { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; margin: 15px 0 8px; color: var(--ink); font: 500 27px 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif JP', serif; }
+	h3 i { color: #788277; font: italic 13px Georgia, serif; }
+	.card-info p { color: #68756a; font-size: 12px; }
+	.visit { display: flex; align-items: center; min-height: calc(100svh - 219px); background: var(--ink); color: #f5f2eb; padding: 92px 0 100px; }
+	.visit-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 10%; align-items: center; }
+	.visit .section-label { color: #d38c7d; }
+	.visit .section-label span { color: #a9b4a7; }
+	.visit h2 { margin-top: 28px; color: #f5f2eb; font-size: 48px; }
+	.visit h2 em { color: #d38c7d; }
+	.visit-details { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 30px; }
+	.visit-detail { border-top: 1px solid rgba(245, 242, 235, .25); padding-top: 13px; }
+	.visit-detail span { color: #b8c1b4; font: 10px Arial, sans-serif; letter-spacing: .14em; }
+	.visit-detail p { margin-top: 10px; color: #f5f2eb; font-size: 13px; line-height: 1.8; }
+	.visit-booking { grid-column: 1 / -1; justify-self: start; margin-top: 2px; background: #d38c7d; color: #20372f; }
+	.visit-booking:hover { background: #e0a092; }
+	.footer { display: grid; grid-template-columns: 1fr 1fr 1fr auto; align-items: center; gap: 20px; padding: 28px 0 32px; color: #68756a; }
+	.footer-brand { color: var(--ink); font: 700 13px Georgia, serif; letter-spacing: .14em; text-decoration: none; }
+	.footer-brand span { display: block; margin-top: 6px; color: #879087; font: 8px Arial, sans-serif; letter-spacing: .14em; }
+	.footer > span { font-size: 11px; }
+	.back-top { justify-self: end; color: var(--ink); font: 9px Arial, sans-serif; letter-spacing: .1em; text-decoration: none; }
+	.footer small { grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 16px; color: #879087; font: 9px Arial, sans-serif; letter-spacing: .1em; }
+	:global(:focus-visible) { outline: 2px solid var(--red); outline-offset: 4px; }
+	@media (max-width: 900px) {
+		.shell { width: min(100% - 56px, 760px); }
+		.nav-links { gap: 20px; }
+		.hero { grid-template-columns: .9fr 1.1fr; gap: 42px; min-height: 600px; }
+		h1 { font-size: 66px; }
+		.hero-image { height: 430px; }
+		h2 { font-size: 48px; }
+		.visit h2 { font-size: 42px; }
+	}
+	@media (max-width: 680px) {
+		:global(html) { scroll-padding-top: 72px; }
+		.shell { width: calc(100% - 40px); }
+		.nav { min-height: 72px; }
+		.nav-links, .nav-location { display: none; }
+		.menu-toggle { display: inline-flex; align-items: center; gap: 11px; border: 0; border-bottom: 1px solid var(--ink); background: transparent; padding: 8px 0; color: var(--ink); cursor: pointer; font: 10px Arial, sans-serif; letter-spacing: .13em; }
+		.menu-icon { display: grid; gap: 5px; width: 21px; }
 		.menu-icon i { display: block; height: 1px; background: currentColor; transition: transform .2s ease; }
 		.menu-toggle[aria-expanded="true"] .menu-icon i:first-child { transform: translateY(3px) rotate(45deg); }
 		.menu-toggle[aria-expanded="true"] .menu-icon i:last-child { transform: translateY(-3px) rotate(-45deg); }
-		.mobile-menu { position: absolute; top: 74px; right: 0; left: 0; display: grid; gap: 0; visibility: hidden; transform: translateY(-12px); border-top: 1px solid var(--line); background: var(--paper); opacity: 0; transition: opacity .25s ease, transform .25s ease, visibility .25s; }
+		.mobile-menu { position: absolute; top: 100%; right: 0; left: 0; display: grid; gap: 0; border-top: 1px solid var(--line); background: var(--paper); box-shadow: 0 16px 22px rgba(32, 55, 47, .08); }
 		.mobile-menu.is-open { visibility: visible; transform: translateY(0); opacity: 1; }
-		.mobile-menu-heading { display: flex; justify-content: space-between; padding: 22px 0 16px; color: var(--red); font: 10px Arial, sans-serif; letter-spacing: .14em; }
-		.mobile-menu a { display: grid; grid-template-columns: 32px 1fr 20px; align-items: center; border-top: 1px solid var(--line); padding: 19px 0; color: var(--ink); font: 16px Georgia, serif; text-decoration: none; }
+		.mobile-menu-heading { display: flex; justify-content: space-between; padding: 20px 0 14px; color: var(--red); font: 10px Arial, sans-serif; letter-spacing: .14em; }
+		.mobile-menu a { display: grid; grid-template-columns: 32px 1fr 20px; align-items: center; border-top: 1px solid var(--line); padding: 17px 0; color: var(--ink); font: 15px 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif JP', serif; text-decoration: none; }
 		.mobile-menu a span { color: var(--red); font: 10px Arial, sans-serif; letter-spacing: .08em; }
-		.mobile-menu a b { justify-self: end; color: var(--red); font: 18px Georgia, serif; font-weight: 400; }
-		.mobile-menu .mobile-booking { padding-bottom: 24px; }
-		.hero { display: flex; flex-direction: column; align-items: stretch; gap: 55px; min-height: auto; padding: 70px 0 90px; }
-		h1 { font-size: clamp(70px, 21vw, 105px); }
-		.hero-image { height: 390px; }
-		.stamp { top: -26px; left: -12px; }
-		.statement { padding: 72px 0 90px; }
+		.mobile-menu a b { justify-self: end; color: var(--red); font: 17px Georgia, serif; font-weight: 400; }
+		.mobile-menu .mobile-booking { padding-bottom: 20px; }
+		.hero { display: flex; flex-direction: column; align-items: stretch; gap: 40px; min-height: auto; padding: 54px 0 72px; }
+		.hero-copy { padding: 0; }
+		.eyebrow { font-size: 9px; letter-spacing: .12em; }
+		h1 { margin: 25px 0 19px; font-size: 54px; line-height: 1.12; }
+		.hero-intro { font-size: 13px; }
+		.hero-actions { align-items: flex-start; flex-wrap: wrap; gap: 14px 20px; margin-top: 25px; }
+		.booking-button { min-height: 48px; padding: 0 16px; font-size: 12px; }
+		.text-link { font-size: 11px; }
+		.hero-hours { margin-top: 24px; font-size: 9px; }
+		.hero-image { height: 340px; }
+		.image-caption { font-size: 9px; }
+		.statement { padding: 66px 0 70px; }
 		.statement-content { display: block; margin-top: 28px; }
-		.statement-body { align-items: flex-start; padding-top: 35px; }
-		.circle-link { width: 84px; height: 84px; }
-		.menu-section { padding: 70px 0 90px; }
+		h2 { font-size: 40px; }
+		.statement-body { grid-template-columns: 1fr; gap: 18px; padding-top: 24px; }
+		.statement-body p { font-size: 13px; }
+		.statement-body .statement-aside { font-size: 16px; }
+		.menu-section { padding: 70px 0 78px; }
 		.section-heading { display: block; }
-		.section-note { margin-top: 22px; text-align: left; }
-		.menu-grid { display: block; margin-top: 38px; }
-		.featured-card { margin-bottom: 28px; }
-		.card-image, .featured-card .card-image { height: 330px; }
-		.visit { display: block; padding: 70px 0; }
-		.visit-mark { margin-bottom: 42px; font-size: 100px; }
-		.visit-details { margin-top: 35px; }
-		.footer { gap: 18px; flex-wrap: wrap; }
+		.section-note { margin-top: 17px; font-size: 11px; text-align: left; }
+		.menu-grid { display: block; margin-top: 34px; }
+		.menu-card:nth-child(2) { margin-top: 36px; }
+		.card-image, .featured-card .card-image { height: 300px; }
+		.card-info { padding-top: 16px; padding-bottom: 19px; }
+		h3 { gap: 9px; font-size: 23px; }
+		.visit { padding: 68px 0 72px; }
+		.visit { min-height: calc(100svh - 243px); }
+		.visit-inner { display: block; }
+		.visit h2 { margin-top: 23px; font-size: 37px; }
+		.visit-details { margin-top: 34px; gap: 22px 16px; }
+		.visit-detail p { font-size: 12px; }
+		.visit-booking { min-height: 48px; padding: 0 15px; font-size: 12px; }
+		.footer { grid-template-columns: 1fr auto; gap: 20px 10px; padding-top: 24px; }
+		.footer > span { grid-column: 1; grid-row: 2; }
+		.back-top { grid-column: 2; grid-row: 1; }
+		.footer small { grid-column: 1 / -1; }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		:global(html) { scroll-behavior: auto; }
+		*, *::before, *::after { transition-duration: .01ms !important; }
 	}
 </style>
 
 <script>
 	const menuToggle = document.querySelector('.menu-toggle');
 	const mobileMenu = document.querySelector('.mobile-menu');
+
+	document.querySelectorAll('a[href^="#"]').forEach((link) => {
+		link.addEventListener('click', (event) => {
+			const href = link.getAttribute('href');
+			const target = href ? document.querySelector(href) : null;
+			if (!target) return;
+
+			event.preventDefault();
+			history.pushState(null, '', href);
+			if (mobileMenu?.contains(link)) {
+				menuToggle?.setAttribute('aria-expanded', 'false');
+				mobileMenu.classList.remove('is-open');
+				mobileMenu.setAttribute('aria-hidden', 'true');
+				mobileMenu.setAttribute('hidden', '');
+			}
+			target.scrollIntoView({ block: 'start', behavior: 'instant' });
+		});
+	});
 
 	menuToggle?.addEventListener('click', () => {
 		const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
@@ -192,12 +275,4 @@ import Layout from '../layouts/Layout.astro';
 		}
 	});
 
-	mobileMenu?.querySelectorAll('a').forEach((link) => {
-		link.addEventListener('click', () => {
-			menuToggle?.setAttribute('aria-expanded', 'false');
-			mobileMenu.classList.remove('is-open');
-			mobileMenu.setAttribute('aria-hidden', 'true');
-			mobileMenu.setAttribute('hidden', '');
-		});
-	});
 </script>
